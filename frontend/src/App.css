@@ -1,0 +1,8 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background-image: url('/bg.jpeg'); /* or your background file */
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+}

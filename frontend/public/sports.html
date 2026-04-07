@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sport Booking</title>
+
+<style>
+
+body{
+margin:0;
+color:white;
+font-family:Arial;
+background-size:cover;
+background-position:center;
+}
+
+.container{
+padding:50px;
+text-align:center;
+}
+
+button{
+padding:10px 20px;
+font-size:18px;
+border:none;
+background:#a64dff;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+<h1 id="sportTitle"></h1>
+<p>Book your court now</p>
+<button>Book Slot</button>
+</div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+const sport = params.get("sport");
+
+document.getElementById("sportTitle").innerText = sport;
+
+const backgrounds = {
+Badminton:"https://images.unsplash.com/photo-1626224583764-f87db24ac4ea",
+Basketball:"https://images.unsplash.com/photo-1546519638-68e109498ffc",
+Volleyball:"https://images.unsplash.com/photo-1593341646782-e0b495cff86d",
+"Table Tennis":"https://images.unsplash.com/photo-1611251135345-18f0c1c2a0db",
+Football:"https://images.unsplash.com/photo-1508098682722-e99c43a406b2"
+};
+
+document.body.style.backgroundImage = "url('" + backgrounds[sport] + "')";
+
+</script>
+
+</body>
+</html>

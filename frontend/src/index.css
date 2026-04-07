@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0b001a;
+  color: white;
+}
+
+/* HEADER STYLES */
+.topBar {
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  background: #110022;
+  border-bottom: 1px solid #2a004d;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  object-fit: contain;
+}
+
+.titleBox h1 {
+  margin: 0;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.slogan {
+  margin: 0;
+  color: #c8a6ff;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.navLinks {
+  margin-left: auto;
+  display: flex;
+  gap: 15px;
+}
+
+.navLinks a {
+  color: #c8a6ff;
+  text-decoration: none;
+  font-size: 12px;
+  border: 1px solid #c8a6ff;
+  padding: 8px 20px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.navLinks a:hover {
+  background: #c8a6ff;
+  color: #110022;
+}
+
+/* HOME PAGE STYLES */
+.homeContainer {
+  padding: 40px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #8c8c8c;
+  font-size: 14px;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.mainTitle {
+  font-size: 36px;
+  margin-top: 0;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+}
+
+.mainTitle span {
+  color: #c8a6ff;
+  border-bottom: 2px solid #c8a6ff;
+  padding-bottom: 5px;
+}
+
+.sportsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 30px; 
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.sportCard {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  height: 220px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  /* reset <button> defaults */
+  border: none;
+  background: none;
+  padding: 0;
+  font-family: inherit;
+  width: 100%;
+}
+
+.sportCard:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 30px rgba(150, 80, 255, 0.4);
+}
+
+.sportCard img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.cardOverlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  transition: 0.3s;
+}
+
+.sportCard:hover .cardOverlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.sportCard h2 {
+  position: relative;
+  z-index: 3;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.bookBtn {
+  display: inline-block;
+  padding: 8px 22px;
+  background: rgba(200, 166, 255, 0.15);
+  border: 1px solid rgba(200, 166, 255, 0.5);
+  border-radius: 20px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c8a6ff;
+  font-weight: 600;
+  transition: background 0.25s, color 0.25s;
+  backdrop-filter: blur(4px);
+}
+
+.sportCard:hover .bookBtn {
+  background: rgba(200, 166, 255, 0.85);
+  color: #1a0a35;
+}
+
+body, html, #root {
+  min-height: 100vh;
+  margin: 0;
+  /* This hex code closely matches the dark background color you are currently using */
+  background-color: #0A041A; 
+}

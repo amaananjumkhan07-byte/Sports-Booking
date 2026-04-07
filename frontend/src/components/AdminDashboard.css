@@ -1,0 +1,116 @@
+.admin-dashboard {
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logout-btn {
+  background: rgba(255, 70, 90, 0.15);
+  border: 1px solid rgba(255, 70, 90, 0.5);
+  color: #ffb3bb;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 70, 90, 0.85);
+  color: #1a0a35;
+}
+
+.controls-bar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.controls-bar input,
+.controls-bar select {
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(200, 166, 255, 0.2);
+  border-radius: 10px;
+  color: white;
+  outline: none;
+}
+
+.controls-bar option {
+  background: #120622;
+  color: white;
+}
+
+.table-container {
+  overflow-x: auto;
+  background: linear-gradient(145deg, rgba(26, 10, 53, 0.7) 0%, rgba(18, 6, 34, 0.7) 100%);
+  border: 1px solid rgba(200, 166, 255, 0.18);
+  border-radius: 15px;
+}
+
+.booking-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.booking-table th {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  text-align: left;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #c8a6ff;
+  text-transform: uppercase;
+}
+
+.booking-table td {
+  padding: 15px;
+  border-top: 1px solid rgba(200, 166, 255, 0.1);
+  font-size: 14px;
+}
+
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.status-pending { background: rgba(255, 193, 7, 0.2); color: #ffca28; }
+.status-approved { background: rgba(40, 200, 120, 0.2); color: #28c878; }
+.status-rejected { background: rgba(255, 70, 90, 0.2); color: #ffb3bb; }
+
+.action-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 8px;
+  transition: opacity 0.2s;
+}
+
+.action-btn:hover { opacity: 0.8; }
+.btn-approve { background: #28c878; color: #fff; }
+.btn-reject { background: #ff465a; color: #fff; }
+
+.file-link {
+  color: #61dafb;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.file-link:hover {
+  text-decoration: underline;
+}
