@@ -71,7 +71,8 @@ export default function BookingModal({ sport, isOpen, onClose }) {
       submitData.append('sport', sport);
       if (file) submitData.append('file', file);
 
-      const response = await fetch('http://localhost:5001/book', {
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+      const response = await fetch(`${API_URL}/book`, {
         method: 'POST',
         body: submitData,
       });
@@ -88,7 +89,7 @@ export default function BookingModal({ sport, isOpen, onClose }) {
       console.error('Booking error:', err);
       setErrorMessage(
         err.message === 'Failed to fetch'
-          ? 'Cannot reach the server. Make sure the backend is running on port 5001.'
+          ? 'Cannot reach the server. Make sure your live backend URL is active.'
           : err.message || 'Something went wrong. Please try again.'
       );
     } finally {

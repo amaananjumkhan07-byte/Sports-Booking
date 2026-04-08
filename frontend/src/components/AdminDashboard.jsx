@@ -24,7 +24,8 @@ export default function AdminDashboard() {
     }
 
     try {
-      const response = await fetch('http://localhost:5001/api/bookings', {
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+      const response = await fetch(`${API_URL}/api/bookings`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -52,7 +53,8 @@ export default function AdminDashboard() {
   const updateStatus = async (id, status) => {
     const token = localStorage.getItem('adminToken');
     try {
-      const response = await fetch(`http://localhost:5001/api/bookings/${id}`, {
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+      const response = await fetch(`${API_URL}/api/bookings/${id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -161,7 +163,7 @@ export default function AdminDashboard() {
                     {b.reason}
                   </div>
                   {b.file && (
-                    <a href={`http://localhost:5001/uploads/${b.file.filename}`} target="_blank" rel="noreferrer" className="file-link">
+                    <a href={`${import.meta.env.VITE_API_URL || 'http://localhost:5001'}/uploads/${b.file.filename}`} target="_blank" rel="noreferrer" className="file-link">
                       View Attachment
                     </a>
                   )}
